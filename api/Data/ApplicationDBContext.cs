@@ -23,12 +23,12 @@ public class ApplicationDBContext : IdentityDbContext<AppUser>
 
         List<IdentityRole> roles = new List<IdentityRole>
         {
-            new IdentityRole
+            new()
             {
                 Name = "Admin",
                 NormalizedName = "ADMIN"
             },
-            new IdentityRole
+            new()
             {
                 Name = "User",
                 NormalizedName = "USER"
