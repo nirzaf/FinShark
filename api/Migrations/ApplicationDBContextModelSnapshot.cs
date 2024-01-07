@@ -82,9 +82,7 @@ namespace api.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
-
                     b.HasIndex("RoleId");
-
                     b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
@@ -144,9 +142,7 @@ namespace api.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("UserId", "RoleId");
-
                     b.HasIndex("RoleId");
-
                     b.ToTable("AspNetUserRoles", (string)null);
                 });
 
@@ -154,18 +150,13 @@ namespace api.Migrations
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("LoginProvider")
                         .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
-
                     b.HasKey("UserId", "LoginProvider", "Name");
-
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
