@@ -54,7 +54,7 @@ public class StockRepository : IStockRepository
         {
             if (query.SortBy.Equals("Symbol", StringComparison.OrdinalIgnoreCase))
             {
-                stocks = query.IsDecsending ? stocks.OrderByDescending(s => s.Symbol) : stocks.OrderBy(s => s.Symbol);
+                stocks = query.IsDescending ? stocks.OrderByDescending(s => s.Symbol) : stocks.OrderBy(s => s.Symbol);
             }
         }
 
